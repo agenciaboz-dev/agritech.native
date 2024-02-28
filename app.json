@@ -1,42 +1,42 @@
 {
-  "expo": {
-      "name": "Mira Suprimentos",
-      "slug": "mirasuprimentos",
-      "owner": "agenciaboz-dev",
-      "version": "2.0.0",
-      "orientation": "portrait",
-      "icon": "./assets/icon.png",
-      "userInterfaceStyle": "light",
-      "splash": {
-          "image": "./assets/splash.png",
-          "resizeMode": "contain",
-          "backgroundColor": "#53337D"
-      },
-      "assetBundlePatterns": ["**/*"],
-      "ios": {
-          "supportsTablet": false,
-          "bundleIdentifier": "br.com.agenciaboz.mirasuprimentos",
-          "buildNumber": "2.0.0",
-          "infoPlist": {
-              "NSCameraUsageDescription": "This app uses the camera to scan QR codes of products in order to display their data."
-          }
-      },
-      "android": {
-          "adaptiveIcon": {
-              "foregroundImage": "./assets/icon.png",
-              "monochromeImage": "./assets/adaptive-icon.png",
-              "backgroundColor": "#53337D",
-              "VersionCode": "2.0.0"
-          },
-          "package": "com.mira.guide"
-      },
-      "web": {
-          "favicon": "./assets/icon.png"
-      },
-      "extra": {
-          "eas": {
-              "projectId": "51f610fe-b3ac-416e-b634-a8654ded7df0"
-          }
-      }
-  }
+    "expo": {
+        "name": "AgriTech",
+        "slug": "agritech",
+        "owner": "agenciaboz-dev",
+        "version": "2.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/icon.png",
+        "userInterfaceStyle": "light",
+        "splash": {
+            "image": "./assets/splash.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#12572B"
+        },
+        "assetBundlePatterns": ["**/*"],
+        "ios": {
+            "supportsTablet": false,
+            "bundleIdentifier": "br.com.agenciaboz.agritech",
+            "buildNumber": "2.0.0",
+            "infoPlist": {
+                "NSCameraUsageDescription": "This app uses the camera to scan QR codes of products in order to display their data."
+            }
+        },
+        "android": {
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/icon.png",
+                "monochromeImage": "./assets/adaptive-icon.png",
+                "backgroundColor": "#12572B",
+                "VersionCode": "2.0.0"
+            },
+            "package": "com.agritech.guide"
+        },
+        "web": {
+            "favicon": "./assets/icon.png"
+        },
+        "extra": {
+            "eas": {
+                "projectId": "51f610fe-b3ac-416e-b634-a8654ded7df0"
+            }
+        }
+    }
 }

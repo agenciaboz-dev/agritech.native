@@ -64,7 +64,8 @@ export default function App() {
             {/* {!loaded && <SplashLoading progress={progress} />} */}
             <WebView
                 ref={webViewRef}
-                source={{ uri: "https://agritech.agenciaboz.com.br" }}
+                source={{ uri: "http://192.168.15.25:5173/" }}
+                // source={{ uri: "https://agritech.agenciaboz.com.br/" }}
                 style={{ flex: 1 }}
                 // containerStyle={{ display: loaded ? "flex" : "none" }}
                 allowFileAccess

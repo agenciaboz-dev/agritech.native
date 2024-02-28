@@ -7,7 +7,7 @@ interface ComponentProps {
 
 export const SplashLoading: React.FC<ComponentProps> = ({ progress }) => {
     return (
-        <View style={{ backgroundColor: "#53337D", flex: 1 }}>
+        <View style={{ backgroundColor: "#12572B", flex: 1 }}>
             <ImageBackground style={{ width: "100%", height: "100%" }} source={require("../../assets/splash.png")}>
                 <ProgressBar
                     progress={progress}
