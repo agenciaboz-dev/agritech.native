@@ -18,15 +18,16 @@
             "bundleIdentifier": "br.com.agenciaboz.agritech",
             "buildNumber": "2.0.0",
             "infoPlist": {
-                "NSCameraUsageDescription": "This app uses the camera to scan QR codes of products in order to display their data."
+                "NSCameraUsageDescription": "Permitir acesso a câmera para foto do perfil?",
+                "NSPhotoLibraryUsageDescription": "Permitir o acesso à galeria de fotos para anexar na foto de perfil?."
             }
         },
         "android": {
             "adaptiveIcon": {
-                "foregroundImage": "./assets/icon.png",
+                "foregroundImage": "./assets/foreground-icon.png",
+                "backgroundImage": "./assets/background-icon.png",
                 "monochromeImage": "./assets/adaptive-icon.png",
-                "backgroundColor": "#12572B",
-                "VersionCode": "2.0.0"
+                "backgroundColor": "#12572B"
             },
             "package": "com.agritech.guide"
         },
@@ -35,7 +36,7 @@
         },
         "extra": {
             "eas": {
-                "projectId": "51f610fe-b3ac-416e-b634-a8654ded7df0"
+                "projectId": "000ef80c-811f-4ec8-9d9c-66635f7f995d"
             }
         }
     }

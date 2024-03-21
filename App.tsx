@@ -31,22 +31,6 @@ export default function App() {
     }
 
     useEffect(() => {
-        if (hasPermission === false) {
-            Alert.alert(
-                "Permissão necessária",
-                "Seu dispositivo não está permitindo acesso a câmera. Você pode corrigir isso nos ajustes do seu dispositivo"
-            )
-        }
-    }, [hasPermission])
-
-    useEffect(() => {
-        ;(async () => {
-            const { status } = await Camera.requestCameraPermissionsAsync()
-            setHasPermission(status === "granted")
-        })()
-    }, [])
-
-    useEffect(() => {
         const backAction = () => {
             // @ts-ignore
             webViewRef.current?.goBack()
@@ -64,8 +48,8 @@ export default function App() {
             {/* {!loaded && <SplashLoading progress={progress} />} */}
             <WebView
                 ref={webViewRef}
-                source={{ uri: "http://192.168.15.25:5173/" }}
-                // source={{ uri: "https://agritech.agenciaboz.com.br/" }}
+                // source={{ uri: "http://192.168.15.25:5173/" }}
+                source={{ uri: "https://agritech.agenciaboz.com.br/" }}
                 style={{ flex: 1 }}
                 // containerStyle={{ display: loaded ? "flex" : "none" }}
                 allowFileAccess
