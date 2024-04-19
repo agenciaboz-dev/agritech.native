@@ -1,8 +1,8 @@
 import { StatusBar } from "expo-status-bar"
 import { useEffect, useRef, useState } from "react"
-import { WebView } from "react-native-webview"
+import { WebView, WebViewMessageEvent } from "react-native-webview"
 import { Camera } from "expo-camera"
-import { Alert, BackHandler } from "react-native"
+import { Alert, BackHandler, Linking } from "react-native"
 import * as SplashScreen from "expo-splash-screen"
 import { SplashLoading } from "./src/Screens/SplashLoading"
 import { PaperProvider } from "react-native-paper"
@@ -30,6 +30,18 @@ export default function App() {
         ])
     }
 
+    const handlePdfLink = async (event: WebViewMessageEvent) => {
+        try {
+            console.log(event.nativeEvent.data)
+            const data = JSON.parse(event.nativeEvent.data)
+            if (data.type == "pdf" && data.url) {
+                await Linking.openURL(data.url)
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     useEffect(() => {
         const backAction = () => {
             // @ts-ignore
@@ -48,8 +60,8 @@ export default function App() {
             {/* {!loaded && <SplashLoading progress={progress} />} */}
             <WebView
                 ref={webViewRef}
-                // source={{ uri: "http://192.168.15.25:5173/" }}
-                source={{ uri: "https://agritech.agenciaboz.com.br/" }}
+                source={{ uri: "http://192.168.15.7:5173/" }}
+                // source={{ uri: "https://agritech.agenciaboz.com.br/" }}
                 style={{ flex: 1 }}
                 // containerStyle={{ display: loaded ? "flex" : "none" }}
                 allowFileAccess
@@ -61,7 +73,7 @@ export default function App() {
                 onError={onError}
                 allowsInlineMediaPlayback
                 injectedJavaScript={INJECTEDJAVASCRIPT}
-                onMessage={() => {}}
+                onMessage={handlePdfLink}
             />
         </PaperProvider>
     )
