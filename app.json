@@ -1,7 +1,7 @@
 {
     "expo": {
-        "name": "AgriTech",
-        "slug": "agritech",
+        "name": "Bump AgriTech",
+        "slug": "agritechbump",
         "owner": "agenciaboz-dev",
         "version": "2.0.0",
         "orientation": "portrait",
@@ -15,7 +15,7 @@
         "assetBundlePatterns": ["**/*"],
         "ios": {
             "supportsTablet": false,
-            "bundleIdentifier": "br.com.agenciaboz.agritech",
+            "bundleIdentifier": "br.com.agenciaboz.agritech.bump",
             "buildNumber": "2.0.0",
             "infoPlist": {
                 "NSCameraUsageDescription": "Permitir acesso a câmera para foto do perfil?",
@@ -29,7 +29,7 @@
                 "monochromeImage": "./assets/adaptive-icon.png",
                 "backgroundColor": "#12572B"
             },
-            "package": "com.agritech.guide"
+            "package": "com.agritech.bump.guide"
         },
         "web": {
             "favicon": "./assets/icon.png"
